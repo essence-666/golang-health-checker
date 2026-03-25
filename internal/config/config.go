@@ -25,6 +25,9 @@ func ReadConfig() (*CheckerData, error) {
 
 	var config CheckerConfig
 	err = yaml.Unmarshal(data, &config)
+	if err != nil {
+		return nil, err
+	}
 
 	return &config.ConfigData, nil
 }

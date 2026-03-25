@@ -47,7 +47,6 @@ func (c *Checker) checkURLHealthy(ctx context.Context, url string) (bool, time.D
 	if err != nil {
 		return false, time.Since(start), err
 	}
-	defer resp.Body.Close()
 
 	return resp.StatusCode == http.StatusOK, time.Since(start), nil
 }

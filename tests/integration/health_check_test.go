@@ -47,9 +47,9 @@ func TestHealthCheckAndMetricsExport(t *testing.T) {
 	bodyStr := string(body)
 
 	expectedMetrics := []string{
-		"healthcker_up",
+		"healthchecker_up",
 		"healthchecker_latency_seconds",
-		"healthchecker_total",
+		"healthchecker_checks_total",
 	}
 
 	for _, metric := range expectedMetrics {

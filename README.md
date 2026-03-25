@@ -21,10 +21,10 @@ A lightweight, concurrent HTTP health checker written in Go. Periodically monito
 
 | Metric | Type | Description |
 |--------|------|-------------|
-| `healthcker_up` | Gauge | `1` if target is healthy, `0` otherwise |
+| `healthchecker_up` | Gauge | `1` if target is healthy, `0` otherwise |
 | `healthchecker_latency_seconds` | Gauge | Response latency in seconds |
-| `healthchecker_total` | Counter | Total number of health checks |
-| `healthchecker_total_failes` | Counter | Total number of failed checks |
+| `healthchecker_checks_total` | Counter | Total number of health checks |
+| `healthchecker_failures_total` | Counter | Total number of failed checks |
 
 ## Quick Start
 

@@ -9,17 +9,16 @@ import (
 type CheckerData struct {
 	Retries uint     `yaml:"retries"`
 	Timeout uint     `yaml:"timeout"`
-	Period  uint      `yaml:"period"`
+	Period  uint     `yaml:"period"`
 	URLs    []string `yaml:"urls"`
 }
 
 type CheckerConfig struct {
-	СonfigData CheckerData `yaml:"checker"`
+	ConfigData CheckerData `yaml:"checker"`
 }
 
 func ReadConfig() (*CheckerData, error) {
 	data, err := os.ReadFile("config.yaml")
-
 	if err != nil {
 		return nil, err
 	}
@@ -27,5 +26,5 @@ func ReadConfig() (*CheckerData, error) {
 	var config CheckerConfig
 	err = yaml.Unmarshal(data, &config)
 
-	return &config.СonfigData, nil
+	return &config.ConfigData, nil
 }

@@ -1,0 +1,9 @@
+checker:
+  timeout: 3
+  retries: 3
+  # in seconds
+  period: 15
+  urls:
+    - https://www.google.com
+    - https://www.yandex.ru
+    - https://www.babaika.228
